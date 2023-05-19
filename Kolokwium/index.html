@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="index.js"></script>
+    <title>Title</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        form div {
+            display: flex;
+            flex-direction: column;
+        }
+        .error{
+            color: red;
+
+        }
+        .buttoncontainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+        .buttoncontainer button{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="buttoncontainer">
+    <button id="button1" onclick="changeButtonBackground('button1')"> Przycisk 1 </button>
+    <button id="button2" onclick="changeButtonBackground('button2')"> Przycisk 2 </button>
+    <button id="button3" onclick="changeButtonBackground('button3')"> Przycisk 3 </button>
+</div>
+
+<form onsubmit="submitForm(event)" novalidate>
+    <div>
+        <label> Login: </label>
+        <input type="text" placeholder="Podaj Login..." id="name" name="name">
+        <span class="error"> </span>
+    </div>
+
+    <div>
+        <label> Email: </label>
+        <input type="email" placeholder="Podaj Email..." id="email" name="email">
+        <span class="error"> </span>
+    </div>
+
+    <div>
+        <label> Hasło: </label>
+        <input type="password" placeholder="Podaj Haslo..." id="password" name="password">
+        <span class="error"> </span>
+    </div>
+
+    <div>
+        <label> Powtórz Hasło: </label>
+        <input type="password" placeholder="Powtorz Haslo..." name="password2" id="password2">
+        <span class="error"> </span>
+    </div>
+
+
+    <button type="submit"> Zapisz! </button>
+</form>
+</body>
